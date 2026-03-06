@@ -6,13 +6,14 @@
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: #000;
 }
 
 *, *::after, *::before {
     box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, p, ul, ol, li {
+body, h1, h2, h3, h4, h5, p, ul, ol, li, p {
     margin: 0;
     padding: 0;
 }
@@ -43,6 +44,7 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li {
 .nav-list {
     display: flex;
     justify-content: right;
+    width: 100%;
     font-size: 16px;
     text-transform: uppercase;
     list-style: none;
@@ -88,7 +90,7 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li {
     margin-bottom: 10px;
 }
 
-.text-p {
+.hero-text {
     padding-top: 36px;
     line-height: 28px;
     margin-bottom: 49px;
@@ -99,19 +101,192 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li {
     border: none;
     padding: 24px 44px;
     font-size: 16px;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
 
+.button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about {
+    background-color: #fff;
+}
+
+.about-content {
+    padding-top: 128px;
+    margin-bottom: 54px;
+}
+
+.h2 {
+    font-size: 30px;
+}
+
+.h2-about {
+    text-align: center;
+    padding-left: 12px;
+}
+
+.text-p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.projects {
+    background-color: #34547A;
+}
+.projects-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 98px 36px 58px 26px;
+}
+.projects-item {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.projects-item:last-child {
+    margin-right: 0px;
+}
+.project-text {
+    color: #fff;
+    text-transform: lowercase;
+    margin-left: 20px;
+}
+.project-count {
+    font-size: 22px;
+}
+
+.skills-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills-flex {
+    padding-top: 110px;
+    margin-bottom: 86px;
+}
+.skills-content {
+    padding-left: 7px;
+    width: 46%;
+}
+
+.h2-skills {
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding-top: 25px;
+}
+.skill-name {
+    margin-bottom: 18px;
+}
+.skill-progress {
+    max-width: 445px;
+    height: 4px;
+    background-color: #C4C4C4;
+    margin-bottom: 26px;
+}
+.skill-progress-current {
+    width: 80%;
+    height: 100%;
+    background-color: #34547A;
+}
+.skill-photo-container {
+    width: 46%;
+}
+.skill-photo {
+    max-width: 555px;
+    width: 100%;
+}
+
+.howiwork {
+    background-color: #EEEFF1;
+}
+
+.howiwork-content {
+    padding-top: 118px;
+    margin-bottom: 110px;
+}
+
+.h2-howiwork {
+    text-align: center;
+    padding-left: 16px;
+    letter-spacing: 0.025em;
+}
+
+.video-howiwork {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.video-howiwork video {
+    width: 100%;
+}
+
+.portfolio {
+    background-color: #fff;
+}
+
+.portfolio-grid {
+    padding-top: 24px;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 0;
+    justify-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.portfolio-item {
+    max-width: 480px;
+    max-height: 480px;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .portfolio-image {
+    background-color: #34547A;
+    cursor: pointer;
+} */
+.portfolio-item:hover {
+    z-index: 1;
+    background-color: #34547A;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1440px) {
-    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
 }
 
 @media screen and (max-width: 1280px) {
     .container {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .projects-flex {
+        flex-wrap: wrap;
+        justify-content: left;
+        padding-right: 0;
+        column-gap: 90px;
+    }
+    .projects-item {
+        margin-right: 0;
     }
 }
 
@@ -126,6 +301,21 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li {
     .hero-content {
         padding-left: 35px;
     }
+    .hero-h1 {
+        padding-top: 16px;
+    }
+    .hero-text {
+        padding-top: 20px;
+        margin-bottom: 26px;
+    }
+
+    .about-content {
+        padding-top: 50px;
+    }
+
+    .projects-flex {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 993px) {
@@ -138,6 +328,13 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li {
     }
     .nav-list-item {
         margin-right: 28px;
+    }
+    .skills-content {
+        margin-right: 20px;
+    }
+    .skills-flex {
+        padding-top: 60px;
+        margin-bottom: 60px;
     }
 }
 
@@ -187,20 +384,57 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li {
     .hero-img {
         max-width: 280px;
     }
-}
 
-@media screen and (max-width: 601px) {
-    .hero-img {
-        max-width: 250px;
+    .h2-skills {
+        padding-top: 0;
     }
 }
 
-@media screen and (max-width: 501px) {
+@media screen and (max-width: 680px) {
+    .hero-flex {
+        flex-direction: column;
+    }
     .hero-img {
-        max-width: 140px;
+        max-width: 380px;
+        margin: 26px auto;
+    }
+    .hero-content {
+        padding-top: 20px;
+        margin-left: 15px;
+    }
+    .h2-skills {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 601px) {
+}
+
+@media screen and (max-width: 501px) {
+    .hero-content {
+        padding-left: 0px;
+    }
+    .projects-flex {
+        padding-left: 0;
+    }
+    
+    .skills-content {
+        width: 49%;
+    }
+    .skill-photo-container {
+        width: 50%;
+    }
+    .h2-skills {
+        margin-bottom: 10px;
+        font-size: 26px;
     }
 }
 
 @media screen and (max-width: 380px) {
-    
+    .hero-img {
+        max-width: 340px;
+    }
+    .h2-skills {
+        font-size: 24px;
+    }
 }
