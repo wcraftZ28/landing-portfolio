@@ -59,6 +59,10 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li, p {
 }
 .nav-list-item a {
     text-decoration: none;
+    color: #000;
+}
+.nav-list-item a:hover {
+    color:#34547A;
 }
 
 .hero {
@@ -224,6 +228,7 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li, p {
 .video-howiwork {
     max-width: 1110px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .video-howiwork video {
@@ -249,22 +254,28 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li, p {
     max-width: 480px;
     max-height: 480px;
     overflow: hidden;
+
+    position: relative;
+}
+
+.portfolio-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("img/view.svg") center/30% no-repeat, #34547A;
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+.portfolio-item:hover::after {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 .portfolio-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* .portfolio-image {
-    background-color: #34547A;
-    cursor: pointer;
-} */
-.portfolio-item:hover {
-    z-index: 1;
-    background-color: #34547A;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 1440px) {
